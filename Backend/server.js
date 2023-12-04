@@ -28,10 +28,10 @@ app.get("/hobbyList", (req,res) =>{
 // user can post the user hobby credencials
 
 app.post("/posthobby", (req, res) => {
-    const sql = "INSERT INTO hobbyinfo (`Hobby`, `userName`, `email`, `contactNo`) VALUES (?,?,?,?)";
+    const sql = "INSERT INTO hobbyinfo (`Hobby`, `user`, `email`, `contactNo`) VALUES (?,?,?,?)";
     const values = [
       req.body.Hobby,
-      req.body.userName,
+      req.body.user,
       req.body.email,
       req.body.contactNo,
     ];
